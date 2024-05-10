@@ -1,0 +1,23 @@
+.container{
+  display:flex;
+  flex-direction:column;
+  justify-content: right;
+  align-items: center;
+  height: 1000px;
+  width: 950px;
+  margin: 15px;
+  background-color: rgb(204, 192, 204);
+
+}
+
+
+.box{
+width: 850px;
+height:850px;
+background-color: blue;  
+color:azure;
+text-align:center;
+line-height: 100px;
+margin: 10px 10px;
+}
+
