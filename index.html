@@ -8,26 +8,62 @@
 
   </head>
   
-
   <body>
-
     <div class="container">
       <div class="column">
         <h2>ABOUT ME</h2>
-        <p>My name is michael and I am learning to ingratiatephotos and videos into HTML</p>
-        <div class="box"><img src="./chain.webp" alt="chains on the screen"></div>
-        <div class="box"><img src="./coderobot.jpg" alt="a robot typing on a screen"></div>
-        <div class="box"><img src="./free image.webp" alt=""></div>
+        <p>My name is Michael and I am learning to incorporate photos and videos into HTML</p>
+        <div class="box">
+          <button onclick="handleClick('chain')">
+            <img src="./5 day forecast .png" alt="chains on the screen" class="hover-pointer">
+          </button>
+        </div>
+        <div class="box">
+          <button onclick="handleClick('coderobot')">
+            <img src="./note take application .png" alt="a robot typing on a screen" class="hover-pointer">
+          </button>
+        </div>
+        <div class="box">
+          <button onclick="handleClick('friends')">
+            <img src="./palchat.webp" alt="friends hugging" class="hover-pointer">
+          </button>
+        </div>
       </div>
       <div class="column">
         <h2>Short clips</h2>
         <p>Nature videos.</p>
-        <div class="box"><video src="./waterfall.mp4" type="video/mp4">waterfall</video></div>
-        <div class="box"><video src="./woods.mp4"></video></div>
-        <div class="box"><video src="./nice-sunset.mp4"></video></div>
+        <div class="box">
+          <button onclick="playVideo('waterfall')">
+            <video id="waterfall" src="./waterfall.mp4" type="video/mp4"></video>
+          </button>
+        </div>
+        <div class="box">
+          <button onclick="playVideo('woods')">
+            <video id="woods" src="./woods.mp4"></video>
+          </button>
+        </div>
+        <div class="box">
+          <button onclick="playVideo('sunset')">
+            <video id="sunset" src="./nice-sunset.mp4"></video>
+          </button>
+        </div>
       </div>
-    
     </div>
-    
-    </body>
+
+    <script>
+      function handleClick(imageName) {
+        alert(`Image ${imageName} clicked!`);
+        // You can add more actions here if needed
+      }
+
+      function playVideo(videoId) {
+        const video = document.getElementById(videoId);
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      }
+    </script>
+  </body>
 </html>
