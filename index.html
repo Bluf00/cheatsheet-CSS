@@ -3,57 +3,78 @@
   <head>
     <title>Flexbox-build</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="widtth=device-width, initial-scale" />
+    <meta name="viewport" content="width=device-width, initial-scale" />
     <link rel="stylesheet" type="text/css" href="./style.css" />
-
   </head>
-  
   <body>
-    <div class="container">
-      <div class="column">
-        <h2>ABOUT ME</h2>
-        <p>My name is Michael and I am learning to incorporate photos and videos into HTML</p>
-        <div class="box">
-          <button onclick="handleClick('chain')">
-            <img src="./5 day forecast .png" alt="chains on the screen" class="hover-pointer">
-          </button>
-        </div>
-        <div class="box">
-          <button onclick="handleClick('coderobot')">
-            <img src="./note take application .png" alt="a robot typing on a screen" class="hover-pointer">
-          </button>
-        </div>
-        <div class="box">
-          <button onclick="handleClick('friends')">
-            <img src="./palchat.webp" alt="friends hugging" class="hover-pointer">
-          </button>
-        </div>
+    <header>
+      <div class="profile-image">
+        <img src="./img/meagain.PNG" alt="Profile Picture" />
       </div>
-      <div class="column">
+      <h1>CSS Snippet Cheat Sheet</h1>
+    </header>
+    <main class="container">
+      <section class="column">
+        <h2>ABOUT ME</h2>
+        <p>My name is Michael and I am learning to incorporate photos and videos into HTML. These are a few of the projects.
+           I have worked on throught my time coding thus far. I am very excited to see where this journey takes me :) </p>
+
+           <h3>You can contact me through email: <a href="mailto:realmicaelnyamohanga@gmail.com">realmicaelnyamohanga@gmail.com</a></h3>
+           <h4>Or access my work on GitHub: <a href="https://github.com/Bluf00" target="_blank">https://github.com/Bluf00</a></h4>
+           
+
+        <article class="box">
+          <button onclick="handleClick('chain')">
+            <img src="./img/5 day forecast .png" alt="forcast" class="hover-pointer" />
+          </button>
+        </article>
+
+        <article class="box">
+          <button onclick="handleClick('background-application')">
+            <img src="./img/background-application.png" alt="background application" class="hover-pointer" />
+          </button>
+        </article>
+
+        <article class="box">
+          <button onclick="handleClick('coderobot')">
+            <img src="./img/note take application .png" alt="a robot typing on a screen" class="hover-pointer" />
+          </button>
+        </article>
+
+        <article class="box">
+          <button onclick="handleClick('friends')">
+            <img src="./img/palchat.webp" alt="palchat" class="hover-pointer" />
+          </button>
+        </article>
+      </section>
+
+      <section class="column">
         <h2>Short clips</h2>
         <p>Nature videos.</p>
-        <div class="box">
+
+        <article class="box">
           <button onclick="playVideo('waterfall')">
             <video id="waterfall" src="./waterfall.mp4" type="video/mp4"></video>
           </button>
-        </div>
-        <div class="box">
+        </article>
+
+        <article class="box">
           <button onclick="playVideo('woods')">
             <video id="woods" src="./woods.mp4"></video>
           </button>
-        </div>
-        <div class="box">
+        </article>
+
+        <article class="box">
           <button onclick="playVideo('sunset')">
             <video id="sunset" src="./nice-sunset.mp4"></video>
           </button>
-        </div>
-      </div>
-    </div>
+        </article>
+      </section>
+    </main>
 
     <script>
       function handleClick(imageName) {
         alert(`Image ${imageName} clicked!`);
-        // You can add more actions here if needed
       }
 
       function playVideo(videoId) {
